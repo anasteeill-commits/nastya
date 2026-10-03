@@ -1,0 +1,33 @@
+class Student:
+    def __init__(self, name, school):
+        self.name = name
+        self.school = school
+
+    def study(self):
+        print(self.name, "навчається у школі", self.school)
+
+
+class Dancer:
+    def __init__(self, dance_style):
+        self.dance_style = dance_style
+
+    def dance(self):
+        print("Танцює у стилі", self.dance_style)
+
+
+class Person(Student, Dancer):
+    def __init__(self, name, school, dance_style):
+        Student.__init__(self, name, school)
+        Dancer.__init__(self, dance_style)
+
+    def info(self):
+        print("Ім'я:", self.name)
+        print("Школа:", self.school)
+        print("Стиль танцю:", self.dance_style)
+
+
+nastya = Person("Настя", "Ліцей", "Hip-Hop")
+
+nastya.info()
+nastya.study()
+nastya.dance()
