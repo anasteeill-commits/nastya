@@ -1,0 +1,26 @@
+import time
+
+
+def measure_time(func):
+    start_time = time.perf_counter()
+    func()
+    end_time = time.perf_counter()
+
+    return end_time - start_time
+
+
+def test_function():
+    time.sleep(1)
+
+
+def test_measure_time():
+    result = measure_time(test_function)
+
+    assert result >= 1
+    assert isinstance(result, float)
+
+    print("Тест пройдено успішно")
+    print("Час роботи функції:", result, "секунд")
+
+
+test_measure_time()
