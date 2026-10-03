@@ -1,0 +1,29 @@
+class Human:
+    def __init__(self, name):
+        self.name = name
+
+    def feed_dog(self, dog):
+        print(f"{self.name} годує собаку {dog.name}.")
+        dog.eat()
+
+    def play_with_dog(self, dog):
+        print(f"{self.name} грається з собакою {dog.name}.")
+        dog.play()
+
+
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def eat(self):
+        print(f"{self.name} їсть корм.")
+
+    def play(self):
+        print(f"{self.name} весело грається!")
+
+
+human = Human("Настя")
+dog = Dog("Тедді")
+
+human.feed_dog(dog)
+human.play_with_dog(dog)
