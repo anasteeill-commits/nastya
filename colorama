@@ -1,0 +1,19 @@
+import colorama
+
+print("Назва модуля:", colorama.__name__)
+print("Документація:", colorama.__doc__)
+
+print("\nАтрибути та методи colorama:")
+print(dir(colorama))
+
+print("\nFore:", colorama.Fore)
+print("Back:", colorama.Back)
+print("Style:", colorama.Style)
+
+colorama.init()
+
+print(colorama.Fore.RED + "Червоний текст")
+print(colorama.Fore.GREEN + "Зелений текст")
+print(colorama.Back.BLUE + "Синій фон")
+print(colorama.Style.BRIGHT + "Яскравий текст")
+print(colorama.Style.RESET_ALL + "Звичайний текст")
